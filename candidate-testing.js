@@ -41,9 +41,9 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   for (let i = 0; i < candidateAnswers.length; i++) {
     if (candidateAnswers[i] === correctAnswers[i]) {
-      console.log(`Correct: candidateAnswer: ${candidateAnswers[i]} correctAnswer: ${correctAnswers[i]}`);
+      console.log(`Correct: candidateAnswer: ${candidateAnswers[i]}, correctAnswer: ${correctAnswers[i]}`);
     } else {
-      console.log(`Not Correct: candidateAnswer: ${candidateAnswers[i]} correctAnswer: ${correctAnswers[i]}`);
+      console.log(`Not Correct: candidateAnswer: ${candidateAnswers[i]}, correctAnswer: ${correctAnswers[i]}`);
     }
   }
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
