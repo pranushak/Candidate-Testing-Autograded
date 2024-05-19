@@ -19,7 +19,7 @@ let questions = ["Who was the first American woman in space? ",
 
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 
-let candidateAnswers;
+let candidateAnswers = [];
 
 
 function askForName() {
@@ -30,22 +30,22 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question(question);
+  //candidateAnswer = input.question(question);
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswer = input.question(questions[i]);
+    candidateAnswers[i] = input.question(questions[i]);
   }
 }
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-  if (candidateAnswer === correctAnswer) {
-    console.log("Correct Answer");
-  } else {
-    console.log("Not correct");
+  for (let i = 0; i < candidateAnswers.length; i++) {
+    if (candidateAnswers[i] === correctAnswers[i]) {
+      console.log(`Correct: candidateAnswer: ${candidateAnswers[i]} correctAnswer: ${correctAnswers[i]}`);
+    } else {
+      console.log(`Not Correct: candidateAnswer: ${candidateAnswers[i]} correctAnswer: ${correctAnswers[i]}`);
+    }
   }
-
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
